@@ -1,14 +1,25 @@
 Для открытия тестов:
+
 1.Скачать проект в виде zip архива
+
 2.Распоковать ахива
+
 3.Открыть в удобной IDE (лучше PyCharm)
+
 4.В терминале написать команду Pytest и нажать enter
 
+
+
 Если тесты неа запустились:
-5. прописать команду: pip install pytset, playwright, pytset-playwright
+
+5.прописать команду: pip install pytset, playwright, pytset-playwright
+
 и после выполнить пункт 4
 
 Для формирования отчетов:
+
 6. Запустить тесты командой: pytest -s -v --alluredir results    
+
 Для просмотра результатов 
+
 7. Выполнить команду в терминале: allure serve results     
