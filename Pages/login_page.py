@@ -56,4 +56,11 @@ class LoginPage:
         string_login_page = self.page.get_by_text("Accepted usernames are")
         expect(string_login_page).to_be_visible()
 
+    def input_with_empty_fields(self):
+        allert = self.page.get_by_text("Epic sadface: Username is required")
+        expect(allert).to_be_visible()
 
+
+    def empty_password(self):
+        allert = self.page.get_by_text("Epic sadface: Password is required")
+        expect(allert).to_be_visible()
