@@ -36,13 +36,13 @@ jobs:
 
       - name: first_test
         if: "github.event.inputs.deployment_target =='first_test'"
-        run: pytest
+        run: pytest tests\test_001_login_page.py::test_input_login_and_password
 
       - name: two_test
         if: "github.event.inputs.deployment_target =='two_test'"
-        run: pytest
+        run: pytest tests\test_001_login_page.py::test_password_incor
 
       - name: there_test
         if: "github.event.inputs.deployment_target =='there_test'"
-        run: pytest
+        run: pytest tests\test_001_login_page.py::test_logout_main_page
 
