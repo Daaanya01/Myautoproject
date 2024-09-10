@@ -36,13 +36,13 @@ jobs:
 
       - name: first_test
         if: "github.event.inputs.deployment_target =='first_test'"
-        run: pytest tests\test_001_login_page.py
+        run: pytest
 
       - name: two_test
         if: "github.event.inputs.deployment_target =='two_test'"
-        run: pytest tests\test_002_add_and_delete_product_in_basket.py
+        run: pytest
 
       - name: there_test
         if: "github.event.inputs.deployment_target =='there_test'"
-        run: pytest tests\test_003_add_products_and_making_an_order.py
+        run: pytest
 
