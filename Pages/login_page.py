@@ -7,6 +7,7 @@ LOGIN1 = "standard_user"
 PASSWORD = "secret_sauce"
 RESULT = ".app_logo"
 INCOR_PASS = "QWERTY12345"
+BLOCKED_USER = "locked_out_user"
 
 class LoginPage:
     def __init__(self, page: Page):
@@ -64,3 +65,17 @@ class LoginPage:
     def empty_password(self):
         allert = self.page.get_by_text("Epic sadface: Password is required")
         expect(allert).to_be_visible()
+
+
+
+    def blocked_user_input(self):
+        login = self.page.locator("#user-name")
+        login.fill(BLOCKED_USER)
+
+    def blocked_user(self):
+
+        allert = self.page.get_by_text("Epic sadface: Sorry, this user has been locked out.")
+        expect(allert).to_be_visible()
+
+
+

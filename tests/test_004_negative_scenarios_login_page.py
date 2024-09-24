@@ -37,3 +37,20 @@ def test_input_login_and_not_input_password(page: Page):
 
 
 
+@allure.feature("blocked_user")
+def test_login_blocked_user(page: Page):
+    login_page = LoginPage(page)
+    #Открытие странциы логина
+    with allure.step("open login page"):
+        login_page.open()
+
+    #Ввод заблокироапнного логина и пароля + нажатие на кнопку Login
+    with allure.step("input blocked user"):
+        login_page.blocked_user_input()
+        login_page.input_password()
+        login_page.click_button_enter()
+
+    #Проверка наличия ошибки на страницы логина
+    with allure.step("Have error on login page"):
+        login_page.blocked_user()
+
