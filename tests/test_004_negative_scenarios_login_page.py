@@ -6,7 +6,7 @@ from Pages.login_page import LoginPage
 import allure
 
 @allure.feature("Entering empty values")
-def  test_input_with_empty_fields(page: Page):
+def test_input_with_empty_fields(page: Page):
     login_page = LoginPage(page)
 
     #Открытие страницы логина
