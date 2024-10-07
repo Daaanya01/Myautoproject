@@ -110,5 +110,19 @@ class MainPage:
         finish_string = self.page.get_by_text("Thank you for your order!")
         expect(finish_string).to_be_visible()
 
+    # Использование опции reset_app_state
+    def using_options_reset_app_state(self):
+        menu = self.page.locator('#react-burger-menu-btn')
+        menu.click()
+        reset = self.page.locator('#reset_sidebar_link')
+        reset.click()
+
+        #Проверка отсутствия товаров в корзине
+    def expected_basket(self):
+        int_basket = self.page.locator('.shopping_cart_badge')
+        expect(int_basket).not_to_be_visible()
+
+
+
 
 

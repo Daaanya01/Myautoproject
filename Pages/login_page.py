@@ -9,12 +9,13 @@ RESULT = ".app_logo"
 INCOR_PASS = "QWERTY12345"
 BLOCKED_USER = "locked_out_user"
 
+
 class LoginPage:
     def __init__(self, page: Page):
         self.page = page
 
 
-    def open(self):
+    def open(self) -> object:
         self.page.goto(URL)
 
 
